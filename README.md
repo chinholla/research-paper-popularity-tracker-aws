@@ -2,7 +2,7 @@
 # Research Paper Popularity Tracker
 #### Project Overview
 
-The **Research Paper Popularity Tracker** is a serverless application designed to track the popularity of research papers based on their citation count, views, or downloads. It uses **Python** for data processing and script automation, **AWS Lambda** for serverless execution, **API Gateway** for handling HTTP requests, and **Streamlit** for an intuitive web interface. This application allows users to track research paper trends and visualize real-time popularity metrics in an easy-to-use interface.
+The **Research Paper Popularity Tracker** is an innovative project designed to track the popularity of research papers in real time. By utilizing **Python** for web scraping, the system extracts essential details like the title of the **paper**, **author name(s)**, and **abstract** from various research sources. These details are dynamically retrieved through an **HTTP API** powered by **AWS API Gateway**, which triggers AWS Lambda functions to handle the backend logic. The use of **BeautifulSoup** for scraping ensures scalability, allowing the system to gather data from multiple sources. The project's frontend is built using **Streamlit**, providing users with an intuitive interface to visualize the research paper's popularity trends and track metrics such as citation count, views, and downloads. With this serverless architecture, the tracker efficiently handles real-time requests and offers a smooth, scalable solution for research monitoring.
 
 # Technology Stack
  
