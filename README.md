@@ -95,9 +95,15 @@ These details are gathered from the website URL provided in the request, making 
 #### API Gateway - HTTP API
 - The app interacts with AWS Lambda via an HTTP API, which is created using AWS API Gateway. This API allows the frontend (or any external service) to request data from the Lambda function.
 - The API is designed as a GET method, which is ideal for retrieving data from the web. It ensures that the scraped information is passed back efficiently without modifying the server-side data.
+- The **Lambda handler** is the main entry point for a lambda function. It's the funstcion that is triggered by an event, such as **API Gateway request**. It is responsible for processing incoming requests and returning requests.
 
 ![3](https://github.com/user-attachments/assets/2dfd4129-f30c-4fe6-9633-0fe596472afb)
 
+
+#### Overall Backend Workflow:
+**The backend processes are neatly tied together:** the API Gateway handles HTTP requests, AWS Lambda triggers the scraping function written in Python, and the scraped data is then processed and returned. **The GET API method** ensures that only data retrieval operations occur, maintaining simplicity and speed.
+
+![getmethod](https://github.com/user-attachments/assets/288c4450-adfe-447a-91d3-99ecc46cc296)
 
 #### Code Overview - app.py
 - The screenshot of app.py from VS Code shows the implementation of the web scraping logic, API integration, and data handling. This code ties the Lambda function and API Gateway together, ensuring smooth communication between the frontend and backend.
@@ -107,10 +113,7 @@ These details are gathered from the website URL provided in the request, making 
 
 
 
-#### Overall Backend Workflow:
-**The backend processes are neatly tied together:** the API Gateway handles HTTP requests, AWS Lambda triggers the scraping function written in Python, and the scraped data is then processed and returned. **The GET API method** ensures that only data retrieval operations occur, maintaining simplicity and speed.
 
-![getmethod](https://github.com/user-attachments/assets/288c4450-adfe-447a-91d3-99ecc46cc296)
 
 
 
